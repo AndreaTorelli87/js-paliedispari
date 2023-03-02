@@ -1,14 +1,20 @@
-let parola = prompt("Inserisci una parola");
-console.log("hai scritto: " + parola);
+let valore = prompt("Inserisci qualcosa");
+console.log("hai scritto: " + valore);
 
-let parolaAlContrario = (reverseString(parola));
+function reverseFunc(valore) {
 
-if (parola == parolaAlContrario) {
-   console.log("La parola inserita è palindroma!!!")
-} else {
-   console.log("La parola inserita non è palindroma!!!")
+   let valoreAlContrario = "";
+
+   for (let i = valore.length - 1; i >=  0; i--) {
+
+      valoreAlContrario += (valore[i]); 
+   }
+   console.log(valoreAlContrario);
+   return valoreAlContrario;
 }
 
-function reverseString(str) {
-   return str.split("").reverse().join("");
+if (valore == reverseFunc(valore)) {
+   console.log("Il valore inserito è palindromo!!!")
+} else {
+   console.log("Il valore inserito non è palindromo!!!")
 }
