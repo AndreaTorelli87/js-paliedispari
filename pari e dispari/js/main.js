@@ -24,8 +24,6 @@ if (sommaNumeri == pariODispariPrompt) {
 }
 
 
-
-
 function pariODispari(numeroDaVerificare) {
 
    let risultato;
