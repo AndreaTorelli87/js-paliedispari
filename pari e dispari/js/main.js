@@ -1,40 +1,43 @@
-          //chiedo di inserire >
-let pariODispariPrompt = prompt('Scegli "pari" o "dispari"');
+let pariODispariPrompt;
 
-           //chiedo di inserire >
-let numeroUtente = parseInt(prompt('Scegli un numero da 1 a 5'));
-console.log("il tuo numero è: " + numeroUtente);
+do {     //chiedo di inserire >                            <finche non scrive esattamente "pari" o "dispari"
+   pariODispariPrompt = prompt('Scegli "pari" o "dispari"');
+   console.log(pariODispariPrompt);
+} while ((pariODispariPrompt != "pari") && (pariODispariPrompt != "dispari"));
+console.log("Hai scelto: " + pariODispariPrompt);
 
-      //Genero un  numero random tra >
+let numeroUtente;
+
+do {       //chiedo di inserire >                            <finche non scrive un numero da 1 a 5
+   numeroUtente = parseInt(prompt('Scegli un numero da 1 a 5'));
+   console.log(numeroUtente);
+} while ((numeroUtente > 5) || (numeroUtente < 1));
+
+console.log("Il tuo numero è: " + numeroUtente);
+
+       //Genero un  numero random tra >
 let numeroComputer = generaNumeroRandom(1,5);
-console.log("il numero del computer è: " + numeroComputer);
+console.log("Il numero del computer è: " + numeroComputer);
 
 //sommo il valore dell'utente a quello random
 let sommaNumeri = numeroUtente + numeroComputer;
-console.log("la somma dei numeri è: " + sommaNumeri);
-
-//stabilisco se la somma è pari o dispari
-console.log(pariODispari(sommaNumeri));
+console.log("La somma dei numeri è: " + sommaNumeri);
 
 //stabilisci il risultato
-if (sommaNumeri == pariODispariPrompt) {
+if ((pariODispari(sommaNumeri)) == pariODispariPrompt) {
    console.log("Hai Vinto!!!");
 } else {
    console.log("Hai perso...");
 }
 
-
 function pariODispari(numeroDaVerificare) {
-
    let risultato;
-
    if (numeroDaVerificare % 2 == 0){
       risultato = "pari";
    } else {
       risultato = "dispari";
    }
    return risultato;
-
 }
 
 function generaNumeroRandom(min, max) {

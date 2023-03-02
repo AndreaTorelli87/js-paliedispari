@@ -1,5 +1,11 @@
 let valore = prompt("Inserisci qualcosa");
-console.log("hai scritto: " + valore);
+console.log("Hai scritto: " + valore);
+
+if (valore == reverseFunc(valore)) {
+   console.log("Il valore inserito è palindromo!!!")
+} else {
+   console.log("Il valore inserito non è palindromo!!!")
+}
 
 function reverseFunc(valore) {
 
@@ -9,12 +15,5 @@ function reverseFunc(valore) {
 
       valoreAlContrario += (valore[i]); 
    }
-   console.log(valoreAlContrario);
    return valoreAlContrario;
-}
-
-if (valore == reverseFunc(valore)) {
-   console.log("Il valore inserito è palindromo!!!")
-} else {
-   console.log("Il valore inserito non è palindromo!!!")
 }
