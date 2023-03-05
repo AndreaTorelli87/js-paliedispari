@@ -1,0 +1,79 @@
+*{
+   font-family: sans-serif;
+}
+
+body{
+   background-image: url(../img/background.jpeg);
+   background-position: middle;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+body > div{
+   background-color: rgba(255, 123, 0, 0.7);
+}
+
+span{
+   animation: titolo 7s linear infinite;
+}
+
+@keyframes titolo {
+
+   0%  {color: white;}
+   25% {color: red;}
+   50% {color: green;}
+   75% {color: blue}
+   100%{color: white;}
+}
+
+#numeroUtente, #numeroComputer{
+   height: 11rem;
+   width: 11rem;
+} 
+
+.mano1{
+   background-image: url(../img/1.png);
+   background-size: cover;
+}
+
+.mano2{
+   background-image: url(../img/2.png);
+   background-size: cover;
+}
+
+.mano3{
+   background-image: url(../img/3.png);
+   background-size: cover;
+}
+
+.mano4{
+   background-image: url(../img/4.png);
+   background-size: cover;
+}
+
+.mano5{
+   background-image: url(../img/5.png);
+   background-size: cover;
+}
+
+.vittoria{
+   animation: vittoria 1s linear infinite;
+}
+
+@keyframes vittoria {
+
+   0%  {color: white;}
+   50% {color: gold;}
+   100%{color: white;}
+}
+
+.sconfitta{
+   animation: sconfitta 5s linear infinite;
+}
+
+@keyframes sconfitta {
+
+   0%  {color: white;}
+   50% {color: black;}
+   100%{color: white;}
+}

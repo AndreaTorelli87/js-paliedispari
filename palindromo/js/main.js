@@ -2,10 +2,12 @@ let valore = prompt("Inserisci qualcosa");
 console.log("Hai scritto: " + valore);
 
 if (valore == reverseFunc(valore)) {
-   console.log("Il valore inserito è palindromo!!!")
+   alert(`${valore} è palindromo!!!`)
 } else {
-   console.log("Il valore inserito non è palindromo!!!")
+   alert(`${valore} non è palindromo!!!`)
 }
+
+location.reload(); 
 
 function reverseFunc(valore) {
 

@@ -10,9 +10,32 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body class="p-0 m-0">
-
-
-
+        <div class="container text-center my-5 text-white rounded-5">
+            <div class="p-3">
+                <form class="my-5">
+                    <div class="my-4 fs-4">
+                        <label for="pariODispariDom">Scegli "pari" o "dispari"</label>
+                        <input class="text-center" type="text" id="pariODispariDom" />
+                    </div>
+                    <div class="my-4 fs-4">
+                        <label for="formNumeroUtente">Scegli un numero da 1 a 5</label>
+                        <input class="text-center" type="number" id="formNumeroUtente" />
+                    </div>
+                </form>
+                <span id="gioca" class="btn fw-bolder fs-1">GIOCA</span>
+            </div>
+            <div id="risultati" class="d-none">
+                <div class="col d-flex align-items-center flex-column">
+                    <h2 class="pb-5">Ti è uscito:</h2>
+                    <div id="numeroUtente"></div>
+                </div>
+                <div class="col d-flex align-items-center flex-column">
+                    <h2 class="pb-5">Al computer, è uscito:</h2>
+                    <div id="numeroComputer"></div>
+                </div>
+                <h1 id="esito" class=""></h1>
+            </div>
+        </div>
         <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>

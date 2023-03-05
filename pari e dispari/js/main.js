@@ -1,34 +1,36 @@
-let pariODispariPrompt;
+let pariODispariDom = document.getElementById('pariODispariDom').value;
 
-do {     //chiedo di inserire >                            <finche non scrive esattamente "pari" o "dispari"
-   pariODispariPrompt = prompt('Scegli "pari" o "dispari"');
-   console.log(pariODispariPrompt);
-} while ((pariODispariPrompt != "pari") && (pariODispariPrompt != "dispari"));
-console.log("Hai scelto: " + pariODispariPrompt);
+gioca.addEventListener("click",
+   function () {
 
-let numeroUtente;
+   const risultatiDOM = document.getElementById("risultati");
+   risultatiDOM.className = `row p-3 d-flex`;
 
-do {       //chiedo di inserire >                            <finche non scrive un numero da 1 a 5
-   numeroUtente = parseInt(prompt('Scegli un numero da 1 a 5'));
-   console.log(numeroUtente);
-} while ((numeroUtente > 5) || (numeroUtente < 1));
+   const esitoDOM = document.getElementById("esito");
 
-console.log("Il tuo numero è: " + numeroUtente);
+   let numeroComputer = generaNumeroRandom(1,5);
+   const numeroComputerDOM = document.getElementById("numeroComputer");
+   numeroComputerDOM.className = `mano${numeroComputer}`;
 
-       //Genero un  numero random tra >
-let numeroComputer = generaNumeroRandom(1,5);
-console.log("Il numero del computer è: " + numeroComputer);
+   let inputNumeroUtente = parseInt(formNumeroUtente.value);
+   const numeroUtente = document.getElementById("numeroUtente");
+   numeroUtente.className = `mano${inputNumeroUtente}`;
 
-//sommo il valore dell'utente a quello random
-let sommaNumeri = numeroUtente + numeroComputer;
-console.log("La somma dei numeri è: " + sommaNumeri);
+   let sommaNumeri = inputNumeroUtente + numeroComputer;
+   console.log("La somma dei numeri è: " + sommaNumeri);
 
-//stabilisci il risultato
-if ((pariODispari(sommaNumeri)) == pariODispariPrompt) {
-   console.log("Hai Vinto!!!");
-} else {
-   console.log("Hai perso...");
-}
+   if ((pariODispari(sommaNumeri)) == pariODispariDom) {
+      document.getElementById("esito").innerHTML = "Hai Vinto!!!";
+      esitoDOM.className = `p-5 fw-bold vittoria`;
+   } else {
+      document.getElementById("esito").innerHTML = "Hai Perso...";
+      esitoDOM.className = `p-5 fw-bold sconfitta`;
+   }
+
+   document.getElementById("gioca").innerHTML = "RI-GIOCA";
+   }
+)
+
 
 function pariODispari(numeroDaVerificare) {
    let risultato;
