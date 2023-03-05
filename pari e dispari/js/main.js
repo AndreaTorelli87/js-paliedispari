@@ -1,8 +1,8 @@
-let pariODispariDom = document.getElementById('pariODispariDom').value;
-
 gioca.addEventListener("click",
    function () {
-
+   let pariODispariDom = document.getElementById('pariODispariDom').value;
+   console.log(pariODispariDom);
+   
    const risultatiDOM = document.getElementById("risultati");
    risultatiDOM.className = `row p-3 d-flex`;
 
@@ -35,9 +35,9 @@ gioca.addEventListener("click",
 function pariODispari(numeroDaVerificare) {
    let risultato;
    if (numeroDaVerificare % 2 == 0){
-      risultato = "pari";
+      risultato = "Pari";
    } else {
-      risultato = "dispari";
+      risultato = "Dispari";
    }
    return risultato;
 }

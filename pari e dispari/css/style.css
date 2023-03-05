@@ -17,6 +17,11 @@ span{
    animation: titolo 7s linear infinite;
 }
 
+select, button, input{
+   text-align: center;
+   border-radius: 0.5rem;
+}
+
 @keyframes titolo {
 
    0%  {color: white;}

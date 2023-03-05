@@ -12,25 +12,35 @@
     <body class="p-0 m-0">
         <div class="container text-center my-5 text-white rounded-5">
             <div class="p-3">
-                <form class="my-5">
-                    <div class="my-4 fs-4">
-                        <label for="pariODispariDom">Scegli "pari" o "dispari"</label>
-                        <input class="text-center" type="text" id="pariODispariDom" />
+                <form class="row my-5">
+                    <div class="col my-4 fs-4 d-flex align-items-center flex-column">
+                        <label for="pariODispariDom">Pari o Dispari</label>
+                        <select id="pariODispariDom" class="mt-3">
+                            <option value="vuoto" selected> </option>
+                            <option value="Pari">Pari</option>
+                            <option value="Dispari">Dispari</option>
+                        </select>
                     </div>
-                    <div class="my-4 fs-4">
+                    <div class="col my-4 fs-4 d-flex align-items-center flex-column">
                         <label for="formNumeroUtente">Scegli un numero da 1 a 5</label>
-                        <input class="text-center" type="number" id="formNumeroUtente" />
+                        <select id="formNumeroUtente" class="mt-3">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
                     </div>
                 </form>
-                <span id="gioca" class="btn fw-bolder fs-1">GIOCA</span>
+                <span id="gioca" class="row btn fw-bolder fs-1">GIOCA</span>
             </div>
             <div id="risultati" class="d-none">
                 <div class="col d-flex align-items-center flex-column">
-                    <h2 class="pb-5">Ti è uscito:</h2>
+                    <h2 class="py-3">Ti è uscito:</h2>
                     <div id="numeroUtente"></div>
                 </div>
                 <div class="col d-flex align-items-center flex-column">
-                    <h2 class="pb-5">Al computer, è uscito:</h2>
+                    <h2 class="py-3">Al computer, è uscito:</h2>
                     <div id="numeroComputer"></div>
                 </div>
                 <h1 id="esito" class=""></h1>
